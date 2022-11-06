@@ -4,7 +4,7 @@ import time
 
 import torch
 import torch.nn as nn
-from net import gtnet
+from net import ffanet
 import numpy as np
 import importlib
 import datetime
@@ -162,7 +162,7 @@ def main():
 
     Data = DataLoaderS(args.data, 0.6, 0.2, device, args.horizon, args.seq_in_len, args.normalize)
 
-    model = gtnet(args.gcn_true, args.buildA_true, args.timefusion_true, args.attention_ture,args.gcn_depth, args.num_nodes,
+    model = ffanet(args.gcn_true, args.buildA_true, args.timefusion_true, args.attention_ture,args.gcn_depth, args.num_nodes,
                   device, dropout=args.dropout, subgraph_size=args.subgraph_size,
                   node_dim=args.node_dim, dilation_exponential=args.dilation_exponential,
                   conv_channels=args.conv_channels, residual_channels=args.residual_channels,

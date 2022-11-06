@@ -1,9 +1,9 @@
 from layer import *
 
 
-class gtnet(nn.Module):
+class ffanet(nn.Module):
     def __init__(self, gcn_true, buildA_true, timefusion_true, attention_ture, gcn_depth, num_nodes, device, predefined_A=None, static_feat=None, dropout=0.3, subgraph_size=20, node_dim=40, dilation_exponential=1, conv_channels=32, residual_channels=64, skip_channels=64, end_channels=128, seq_length=12, in_dim=2, out_dim=12, layers=3, propalpha=0.05, tanhalpha=3, layer_norm_affline=True):
-        super(gtnet, self).__init__()
+        super(ffanet, self).__init__()
         self.gcn_true = gcn_true
         self.buildA_true = buildA_true
         self.attention_ture = attention_ture

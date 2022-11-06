@@ -4,7 +4,7 @@ import argparse
 import time
 from util import *
 from trainer import Trainer
-from net import gtnet
+from net import ffanet
 import datetime
 
 global_log_file = None
@@ -108,7 +108,7 @@ def main(runid):
     # else:
     #     static_feat = None
 
-    model = gtnet(args.gcn_true, args.buildA_true,  args.timefusion_true, args.attention_ture, args.gcn_depth, args.num_nodes,
+    model = ffanet(args.gcn_true, args.buildA_true,  args.timefusion_true, args.attention_ture, args.gcn_depth, args.num_nodes,
                   device, predefined_A=predefined_A,
                   dropout=args.dropout, subgraph_size=args.subgraph_size,
                   node_dim=args.node_dim,
